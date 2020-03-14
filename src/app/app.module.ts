@@ -11,9 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ClothingListComponent } from './clothing/clothing-list/clothing-list.component';
+import { ClothingItemComponent } from './clothing/clothing-list/clothing-item/clothing-item.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent, ClothingItemComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

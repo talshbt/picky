@@ -1,16 +1,18 @@
-       <a href = "#" 
-            class ="list-group-item clearfix" 
-             >
-                <div class="pull-left" >
-                    <h4 class = "list-group-item-heading">{{item.name}}</h4>
-                    <p class = "list-group-item-text">{{item.description}}</p>
-                </div>
-                <span class = "pull-right">
-                    <img 
-                        src = {{item.imagePath}} 
-                        alt = "" 
-                        class ="img-responsive" 
-                        style = "max-height: 118px; ">
-               </span>
-         </a> 
     <hr>
+
+
+
+<div class="card" style="max-width:9em;">
+  <div class="card-header">
+<h4 class = "">{{item.name}}</h4>
+                    <p class = "">{{item.description}}</p>  </div>
+  <img class="card-img-top" src = {{item.imagePath}}  alt="Card image top" >
+  <div class="card-body">
+      <p class="card-text">A Card with a top and bottom images</p>
+
+  </div>
+
+  <div class="card-footer">
+          This is a footer
+  </div>
+</div>

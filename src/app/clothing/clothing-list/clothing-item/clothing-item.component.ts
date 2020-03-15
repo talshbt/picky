@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Clothing } from '../../clothing.model';
 
 @Component({
   selector: 'app-clothing-item',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clothing-item.component.css']
 })
 export class ClothingItemComponent implements OnInit {
-
+  @Input()item:Clothing; 
   constructor() { }
 
   ngOnInit() {

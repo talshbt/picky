@@ -29,7 +29,9 @@
     <div class= " col-12">
       <div class = "list-clothing">
        <app-clothing-item  style = "cursor:pointer"  class = "list-item-clothing" *ngFor = "let item of clothing" 
-       [item]="item"></app-clothing-item>
+       [item]="item"
+       (itemSelectedEvent) = "onItemSelected(item)">
+       </app-clothing-item>
       </div>
   </div>
   </div>

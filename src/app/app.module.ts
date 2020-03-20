@@ -12,9 +12,12 @@ import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, Mat
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ClothingListComponent } from './clothing/clothing-list/clothing-list.component';
 import { ClothingItemComponent } from './clothing/clothing-list/clothing-item/clothing-item.component';
+import { ClothingService } from './clothing/clothing.service';
+
 @NgModule({
   imports:      [ BrowserModule, FormsModule],
   declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent, ClothingItemComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ClothingService],
 })
 export class AppModule { }

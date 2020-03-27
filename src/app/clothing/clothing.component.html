@@ -1,1 +1,8 @@
-<app-clothing-list (selectedItem)= "selectedItem = $event"></app-clothing-list>
+<div class="row">
+  <div class="col-md-5">
+    <app-clothing-list></app-clothing-list>
+  </div>
+  <div class="col-md-7">
+    <router-outlet></router-outlet>
+  </div>
+</div>

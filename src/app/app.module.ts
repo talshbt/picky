@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -13,9 +14,10 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { ClothingListComponent } from './clothing/clothing-list/clothing-list.component';
 import { ClothingItemComponent } from './clothing/clothing-list/clothing-item/clothing-item.component';
 import { ClothingService } from './clothing/clothing.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent, ClothingItemComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ClothingService],

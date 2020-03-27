@@ -1,7 +1,10 @@
 
 
 
-<div (click) = "onSelected()" class="card" style="max-width:9em;">
+ 
+<div style="cursor: pointer;"
+[routerLink]="[index]"
+routerLinkActive="active" class="card" style="max-width:9em;">
   <div class="card-header">
 <h4 class = "">{{item.name}}</h4>
                     <p class = "">{{item.description}}</p>  </div>
@@ -16,3 +19,4 @@
           This is a footer
   </div>
 </div>
+

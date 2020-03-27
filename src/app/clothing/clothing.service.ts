@@ -4,8 +4,8 @@ import { Clothing } from './clothing.model';
 
 @Injectable()
 export class ClothingService {
-  detailsChanged = new Subject<Clothing[]>();
-  detailsItem = new Subject<Clothing>();
+  clothingArrayChanged = new Subject<Clothing[]>();
+  itemSelected = new Subject<any>()
 
     clothing: Clothing[] = [
     new Clothing('Test', 'A Test Recipe ', 'https://live.staticflickr.com/416/32636205261_92f619806b_b.jpg'),
@@ -17,8 +17,8 @@ export class ClothingService {
   ];
 
 
-  getClothingItem(){
-
+  getClothingItem(index: number){
+      return this.clothing[index];
   }
 
   getClothingList(){
@@ -28,6 +28,10 @@ export class ClothingService {
   sendClothingItem(){
     
 
+  }
+
+   getRecipe(index: number) {
+  
   }
 
   constructor() { }

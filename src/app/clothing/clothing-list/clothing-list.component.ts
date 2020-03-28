@@ -3,6 +3,7 @@ import { Clothing } from '../clothing.model';
 import { ClothingService } from '../clothing.service';
 import { Subscription } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
 
 @Component({
   selector: 'app-clothing-list',
@@ -44,7 +45,7 @@ clothing: Clothing[]
    }
 
     onNewClothing() {
-    this.router.navigate(['new'], {relativeTo: this.route});
+      this.router.navigate(['new'], {relativeTo: this.route});
     }
   
 

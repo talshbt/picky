@@ -15,10 +15,11 @@ import { ClothingListComponent } from './clothing/clothing-list/clothing-list.co
 import { ClothingItemComponent } from './clothing/clothing-list/clothing-item/clothing-item.component';
 import { ClothingService } from './clothing/clothing.service';
 import { AppRoutingModule } from './app-routing.module';
+import { AddClothesComponent } from './modals/add-clothes/add-clothes.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent, ClothingItemComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent, ClothingItemComponent, AddClothesComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ClothingService],
 })

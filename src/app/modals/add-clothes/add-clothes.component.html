@@ -1,0 +1,43 @@
+    <div class = "container">
+    <div class="wrapper" (click)="context.resolve()">
+    <a href="#" class="close-button">
+        <div class="in">
+        <div class="close-button-block"></div>
+        <div class="close-button-block"></div>
+        </div>
+        <div class="out">
+        <div class="close-button-block"></div>
+        <div class="close-button-block"></div>
+        </div>
+    </a>
+    </div>
+    </div>
+  
+   <div class="container"> 
+        <div class="row mt-3">
+            <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+                <form  #f="ngForm" (ngSubmit)="onSubmit()">
+                    <div *ngFor="let item of c" class = "form-group">
+                        <label  [for] = "item"> {{item}} </label>
+                        <input  
+                        [placeholder]="item"
+                        type = "text" 
+                        [name] = "item" 
+                        class ="form-control"
+                        #[item]="ngModel"
+                        ngModel required personName>
+                    </div>
+
+
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+                          <button type= "submit" class="btn btn-success">Save</button>
+                          <button class="btn btn-danger" (click)="onFetchDetailsDs()">Featch</button>
+                        </div>
+                     </div>
+                     
+                </form>
+            </div>
+        </div>
+    </div>
+

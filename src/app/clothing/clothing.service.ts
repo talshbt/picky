@@ -6,6 +6,7 @@ import { Clothing } from './clothing.model';
 export class ClothingService {
   clothingArrayChanged = new Subject<Clothing[]>();
   itemSelected = new Subject<any>()
+  addItemClicked = new Subject<any>()
 
     clothing: Clothing[] = [
     new Clothing('Test', 'A Test Recipe ', 'https://live.staticflickr.com/416/32636205261_92f619806b_b.jpg'),

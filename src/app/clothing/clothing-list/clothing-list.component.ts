@@ -3,7 +3,8 @@ import { Clothing } from '../clothing.model';
 import { ClothingService } from '../clothing.service';
 import { Subscription } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogConfig } from "@angular/material";
+import { AddClothesComponent } from '../../modals/add-clothes/add-clothes.component';
 
 @Component({
   selector: 'app-clothing-list',
@@ -24,7 +25,7 @@ export class ClothingListComponent implements OnInit {
 clothing: Clothing[]
   subscription: Subscription;
 
-     constructor(private clothingService: ClothingService, private route: ActivatedRoute, private router: Router) { }
+     constructor(private clothingService: ClothingService, private route: ActivatedRoute, private router: Router,     private compFactoryResolver: ComponentFactoryResolver, public dialog: MatDialog) { }
 
     ngOnInit() {
       this.subscription = this.clothingService.itemSelected
@@ -46,6 +47,8 @@ clothing: Clothing[]
 
     onNewClothing() {
       this.router.navigate(['new'], {relativeTo: this.route});
+      this.isOpen = true;
+
     }
   
 

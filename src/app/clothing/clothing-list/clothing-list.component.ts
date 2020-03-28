@@ -1,10 +1,17 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  ComponentFactoryResolver,
+  ViewChild,
+  OnDestroy,
+  OnInit
+} from "@angular/core";
 import { Clothing } from '../clothing.model';
 import { ClothingService } from '../clothing.service';
 import { Subscription } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogConfig } from "@angular/material";
 import { AddClothesComponent } from '../../modals/add-clothes/add-clothes.component';
+import { PlaceholderDirective } from "../../shared/placeholder/placeholder.directive";
 
 @Component({
   selector: 'app-clothing-list',
@@ -12,20 +19,24 @@ import { AddClothesComponent } from '../../modals/add-clothes/add-clothes.compon
   styleUrls: ['./clothing-list.component.css']
 })
 export class ClothingListComponent implements OnInit {
-  //  @Output() selectedItem = new EventEmitter<Clothing>();
-  // clothing: Clothing[] = [
-  //   new Clothing('Test', 'A Test Recipe ', 'https://live.staticflickr.com/416/32636205261_92f619806b_b.jpg'),
-  //   new Clothing('Test2', 'A Test Recipe ', 'https://p1.pxfuel.com/preview/519/531/779/sport-adidas-shirt-street.jpg'),
-  //   new Clothing('Test2', 'A Test Recipe ', 'https://p1.pxfuel.com/preview/519/531/779/sport-adidas-shirt-street.jpg'),
-  //   new Clothing('Test2', 'A Test Recipe ', 'https://p1.pxfuel.com/preview/519/531/779/sport-adidas-shirt-street.jpg'),
-  //   new Clothing('Test2', 'A Test Recipe ', 'https://p1.pxfuel.com/preview/519/531/779/sport-adidas-shirt-street.jpg'),
 
-
-  // ];
 clothing: Clothing[]
   subscription: Subscription;
+  @ViewChild(PlaceholderDirective, { static: false })
+  dialogHost: PlaceholderDirective;
+  isOpen = false;
+   @ViewChild(PlaceholderDirective, { static: false })
+      dialogHost: PlaceholderDirective;
 
-     constructor(private clothingService: ClothingService, private route: ActivatedRoute, private router: Router,     private compFactoryResolver: ComponentFactoryResolver, public dialog: MatDialog) { }
+      
+     constructor(
+      private clothingService: ClothingService,
+      private route: ActivatedRoute, 
+      private router: Router,
+      private compFactoryResolver: ComponentFactoryResolver,
+      public dialog: MatDialog) { }
+ 
+
 
     ngOnInit() {
       this.subscription = this.clothingService.itemSelected
@@ -45,11 +56,27 @@ clothing: Clothing[]
 
    }
 
-    onNewClothing() {
-      this.router.navigate(['new'], {relativeTo: this.route});
-      this.isOpen = true;
+openDialog(): void {
+    this.isOpen = true;
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.height = "700px";
+    dialogConfig.width = "600px";
+    dialogConfig.hasBackdrop = true;
+    dialogConfig.id = "my-modal-component";
+    
+    dialogConfig.position = {
+      top: "0",
+      left: "30%",
+    };
+    dialogConfig.data = {  };
 
-    }
+    const dialogRef = this.dialog.open(AddClothesComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      this.isOpen = false;
+    });
+  }
   
 
 

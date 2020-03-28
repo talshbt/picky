@@ -14,3 +14,14 @@ html, body, div, img {
 body {
     line-height: 1;
 }
+
+@import url('https://unpkg.com/bootstrap@5.1.7/dist/css/bootstrap.min.css')
+
+
+mat-dialog-container#modal-component {
+    border: 3px solid #262626;
+    border-radius: 11px;
+    background-color: #000000;
+    
+}
+

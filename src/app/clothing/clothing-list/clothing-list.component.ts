@@ -28,7 +28,7 @@ clothing: Clothing[]
    @ViewChild(PlaceholderDirective, { static: false })
       dialogHost: PlaceholderDirective;
 
-      
+
      constructor(
       private clothingService: ClothingService,
       private route: ActivatedRoute, 
@@ -62,13 +62,12 @@ openDialog(): void {
     dialogConfig.height = "700px";
     dialogConfig.width = "600px";
     dialogConfig.hasBackdrop = true;
-    dialogConfig.id = "my-modal-component";
+    dialogConfig.id = "add-clothes-component";
     
     dialogConfig.position = {
       top: "0",
       left: "30%",
     };
-    dialogConfig.data = {  };
 
     const dialogRef = this.dialog.open(AddClothesComponent, dialogConfig);
 

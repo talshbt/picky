@@ -1,0 +1,39 @@
+#modal-content-wrapper {
+    width: 100%;
+    height: 100%;
+    grid-template-rows: repeat(1fr, 3);
+    background-color: rgb(238, 232, 196);
+    padding:10;
+}
+
+#modal-title {
+    font-size: 22px;
+}
+
+#modal-footer {
+    justify-self: right;
+    align-self: center;
+}
+
+#modal-action-button {
+    margin-right: 30px;
+    background-color:#3b3b3b;
+}
+
+#modal-cancel-button {
+    background-color: #4e4e4e;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
+
+* {
+  font-family: 'Odibee Sans', cursive; /* Use font family anywhere in the component */
+}
+
+p {
+  font-size: 20;
+  padding-left:10px;
+  
+
+}

@@ -7,16 +7,10 @@
   <p>Id</p>
   <p>Year</p>
 
-   <span class="pull-right">
-                  <img
-                    src = {{this.data.item.img}}
-                    alt ={{data.name}}
-                    class = "img-responsive"
-                    style="max-height: 400px;">
-              </span>
+
  <hr>
 <div mat-dialog-actions>
-  <button mat-raised-button [ngStyle]="{'background-color':'grey'}" [mat-dialog-close]="data.img" cdkFocusInitial>Ok</button>
+  <button mat-raised-button [ngStyle]="{'background-color':'grey'}" cdkFocusInitial>Ok</button>
   <button mat-raised-button color="primary" (click)="onNoClick()">No Thanks</button>
 </div>
 </div>

@@ -16,11 +16,10 @@ import { ClothingItemComponent } from './clothing/clothing-list/clothing-item/cl
 import { ClothingService } from './clothing/clothing.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AddClothesComponent } from './modals/add-clothes/add-clothes.component';
-import { PlaceholderDirective } from './shared/placeholder.directive';
-
+import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent, ClothingItemComponent, AddClothesComponent, PlaceholderDirective ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent, ClothingItemComponent, AddClothesComponent, PlaceholderDirective],
   bootstrap:    [ AppComponent ],
   providers: [ClothingService],
 })

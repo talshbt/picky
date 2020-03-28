@@ -56,7 +56,7 @@ clothing: Clothing[]
 
    }
 
-openDialog(): void {
+onNewClothing(): void {
     this.isOpen = true;
     const dialogConfig = new MatDialogConfig();
     dialogConfig.height = "700px";

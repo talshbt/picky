@@ -12,7 +12,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from "@angular/material";
 import { AngularMaterialModule } from './angular-material.module';
 
-
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ClothingListComponent } from './clothing/clothing-list/clothing-list.component';
 import { ClothingItemComponent } from './clothing/clothing-list/clothing-item/clothing-item.component';
@@ -21,7 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AddClothesComponent } from './modals/add-clothes/add-clothes.component';
 import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule, AngularMaterialModule],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule, AngularMaterialModule, BrowserAnimationsModule],
   declarations: [ AppComponent, HelloComponent, HeaderComponent, ClothingComponent, ShoppingListComponent, ClothingListComponent, ClothingItemComponent, AddClothesComponent, PlaceholderDirective],
   bootstrap:    [ AppComponent ],
   providers: [ClothingService],

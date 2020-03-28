@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { ClothingComponent } from './clothing/clothing.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from "@angular/material";
+// import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from "@angular/material";
 import { AngularMaterialModule } from './angular-material.module';
 
 
